@@ -21,7 +21,7 @@ npm test
 ### Login
 localhost:3000/login.php
 
-[![851516843_474942097108504402.jpg](https://s13.postimg.org/rmnuif587/851516843_474942097108504402.jpg)](https://postimg.org/image/48fv6hnar/)
+[![851516843_474942097108504402.jpg](https://s13.postimg.org/rmnuif587/851516843_474942097108504402.jpg =100x100)](https://postimg.org/image/48fv6hnar/)
 
 ### GET /sendmsg?user=CONTACT&msg=MESSAGETEXT
 send message to contact (contact can be number or name)
