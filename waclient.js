@@ -111,7 +111,7 @@ app.get('/open', function(req, res) {
 			res.JSON({
 				error: true
 			})
-		}
+		}else
 		res.json({
 			success: true
 		})

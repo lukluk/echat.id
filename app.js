@@ -21,7 +21,7 @@ function addQueue(id,query) {
 function thread() {
     console.log('call', queue[0].url)
     setTimeout(function(){
-      console.log("TIMEOUT "+queue[0].url)
+      console.log("TIMEOUT ")
       queue.splice(0, 1);
       thread()
     },10000)
