@@ -10,6 +10,9 @@ function Nav(nightmare) {
 			.then(function() {
 				cb()
 			})
+      .catch(function(error) {
+        throw new Error('may you not logged')
+      })
 	}
 
 	this.openWindow = function (user, cb) {
@@ -49,6 +52,12 @@ function Nav(nightmare) {
 				} else {
 					cb && cb(true)
 				}
+			})
+      .catch(function(error) {
+				res.json({
+					error: true,
+					message: error
+				})
 			})
 	}
 

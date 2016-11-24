@@ -20,6 +20,7 @@ var nav = new Nav(nightmare)
 app.get('/login', function(req, res) {
 	nightmare
 		.wait('.qrcode')
+    .screenshot('token.png')
 		.evaluate(function() {
 			return jQuery('.qrcode img').attr('src')
 		})
@@ -29,6 +30,9 @@ app.get('/login', function(req, res) {
 
 })
 app.all('/*', function(req, res, next) {
+  if(req.originalUrl=='/login' || req.originalUrl=='/'){
+    next()
+  }else
 	nav.checkSession(function() {
 		next()
 	})
