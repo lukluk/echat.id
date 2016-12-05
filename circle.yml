@@ -1,0 +1,29 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    America/Los_Angeles # Set the timezone
+
+  # Version of ruby to use
+  node:
+    version:
+      6.9.1
+
+  # Override /etc/hosts
+  hosts:
+    localhost: 127.0.0.1
+
+  # Add some environment variables
+  environment:
+    CIRCLE_ENV: test
+
+## Customize dependencies
+dependencies:
+  pre:
+    - npm install # install from a different package manager
+  
+## Customize test commands
+test:
+  override:
+    - npm test
+
