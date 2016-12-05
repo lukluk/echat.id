@@ -21,7 +21,7 @@ machine:
 dependencies:
   pre:
     - npm install # install from a different package manager
-  
+    - npm install mocha -g  
 ## Customize test commands
 test:
   override:
