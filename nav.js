@@ -10,6 +10,9 @@ function Nav(nightmare) {
 			.then(function() {
 				cb()
 			})
+      .catch(function(error) {
+        throw new Error('may you not logged')
+      })
 	}
 
 	this.openWindow = function (user, cb) {
@@ -17,20 +20,16 @@ function Nav(nightmare) {
 			.insert('.input-search', user)
 			.wait(1000)
 			.evaluate(function(user) {
-				var debuglog = []
-				jQuery('.emojitext').each(function() {
-					debuglog.push(jQuery(this).attr('title'))
+				
+				jQuery('.emojitext').each(function() {			
 					jQuery(this).attr('title', (jQuery(this).attr('title') + '').replaceAll(' ', '').replaceAll('-', '').replace('+', ''))
 
 				})
 				if (jQuery('.emojitext[title=' + user + ']').length > 0) {
 					jQuery('.emojitext[title=' + user + ']').attr("class", 'el' + user)
-				}
-				debuglog.push($('<div>').append(jQuery('.el' + user).clone()).html())
+				}				
 				return {
-					isfound: jQuery('.el' + user).length > 0,
-					all: jQuery('.el' + user),
-					debug: debuglog
+					isfound: jQuery('.el' + user).length > 0					
 				}
 			}, user)
 			.then(function(obj) {
@@ -50,9 +49,16 @@ function Nav(nightmare) {
 					cb && cb(true)
 				}
 			})
+      .catch(function(error) {
+				res.json({
+					error: true,
+					message: error
+				})
+			})
 	}
 
 	this.scroll = function (cb, el, child, mode, max, n, now) {
+		var self = this
 		console.log('scroll', el, child, mode, max, n, now)
 		nightmare
 			.evaluate(function(elem, mode, echild, n) {
@@ -79,14 +85,14 @@ function Nav(nightmare) {
 					} else
 					if (!now) {
 						n++
-						scroll(cb, el, child, mode, max, n, ch)
+						self.scroll(cb, el, child, mode, max, n, ch)
 					} else
 					if (ch > now) {
 						n++
-						scroll(cb, el, child, mode, max, n, ch)
+						self.scroll(cb, el, child, mode, max, n, ch)
 					} else {
 						n++
-						scroll(cb, el, child, mode, max, n, ch)
+						self.scroll(cb, el, child, mode, max, n, ch)
 					}
 				}, 2500)
 
@@ -94,6 +100,7 @@ function Nav(nightmare) {
 	}
 
 	this.readChatHistory = function (user, max, cb) {
+		var self = this
 		if (user.indexOf('62 ') > -1) {
 			user = '+' + user.trim()
 			console.log('fetch ', user)
@@ -109,7 +116,7 @@ function Nav(nightmare) {
 			.wait('.pane-chat-tile')
 			.wait(500)
 			.then(function() {
-				scroll(function() {
+				self.scroll(function() {
 					nightmare
 						.evaluate(function() {
 							var data = {}
@@ -195,3 +202,4 @@ function Nav(nightmare) {
 	}
 }
 module.exports = Nav
+

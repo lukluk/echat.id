@@ -15,17 +15,18 @@ describe('chat', function() {
   //         })
   //   });
   // })
-  // describe('open window',function(){
-  //   it("should open 62818667898 window",function(done){
-  //     this.timeout(30000000);
-  //     request(HOST+'/open?user=62818667898',function(err,req,body){
-  //         if(err) throw new Error('Cannot access API')
-  //         status = JSON.parse(body)
-  //         expect(status).to.have.property("success")
-  //         done()
-  //     })
-  //   })
-  // })
+   describe('open window',function(){
+     it("should open 62818667898 window",function(done){
+       this.timeout(30000000);
+       request(HOST+'/open?user=62818667898',function(err,req,body){
+           if(err) throw new Error('Cannot access API')
+           status = JSON.parse(body)
+           expect(status).to.have.property("success")
+           done()
+       })
+     })
+   })
+/*
   describe('basic', function() {
     this.timeout(20000);
     it("should send msg to 6281296286864",function(done){
@@ -38,4 +39,5 @@ describe('chat', function() {
       })
     })
   });
+*/
 });
