@@ -1,6 +1,6 @@
 var request = require("request")
 var expect = require('expect.js');
-const HOST = "http://localhost:8080"
+const HOST = "http://localhost:3000"
 const target = "628119502673"
 describe('chat', function() {
   // describe('get history',function(){
