@@ -1,0 +1,10 @@
+[33mStarting up http-server, serving [39m[36m./[39m[33m
+Available on:[39m
+[32m  http://127.0.0.1:8080[39m
+[32m  http://128.199.204.106:8080[39m
+[32m  http://10.15.0.6:8080[39m
+[32m  http://10.130.42.226:8080[39m
+Hit CTRL-C to stop the server
+[Tue Nov 29 2016 05:08:14 GMT+0000 (UTC)] "[36mGET[39m [36m/[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36"
+[Tue Nov 29 2016 05:08:14 GMT+0000 (UTC)] "[36mGET[39m [36m/favicon.ico[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36"
+[Tue Nov 29 2016 05:08:14 GMT+0000 (UTC)] "[31mGET[39m [31m/favicon.ico[39m" Error ([31m404[39m): "[31mNot found[39m"
