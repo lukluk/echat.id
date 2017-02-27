@@ -10,21 +10,26 @@ function Nav(nightmare) {
 			.then(function() {
 				cb()
 			})
+      .catch(function(error) {
+        throw new Error('may you not logged')
+      })
 	}
 
 	this.openWindow = function (user, cb) {
 		nightmare
-			.insert('.input-search', user)
+			.type('.input-search', user)
 			.wait(1000)
+      .screenshot('./screenshot/'+user + 'search.png')
 			.evaluate(function(user) {
 				var debuglog = []
 				jQuery('.emojitext').each(function() {
 					debuglog.push(jQuery(this).attr('title'))
-					jQuery(this).attr('title', (jQuery(this).attr('title') + '').replaceAll(' ', '').replaceAll('-', '').replace('+', ''))
+					jQuery(this).attr('title', (jQuery(this).attr('title') + '').replaceAll(' ', '').replaceAll('-', '').replace('+', '').toLowerCase())
 
 				})
+        user = user.toLowerCase()
 				if (jQuery('.emojitext[title=' + user + ']').length > 0) {
-					jQuery('.emojitext[title=' + user + ']').attr("class", 'el' + user)
+					jQuery('.emojitext[title=' + user + ']').attr("class", 'el' + user.toLowerCase())
 				}
 				debuglog.push($('<div>').append(jQuery('.el' + user).clone()).html())
 				return {
@@ -49,6 +54,12 @@ function Nav(nightmare) {
 				} else {
 					cb && cb(true)
 				}
+			})
+      .catch(function(error) {
+				res.json({
+					error: true,
+					message: error
+				})
 			})
 	}
 
