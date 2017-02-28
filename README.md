@@ -1,76 +1,19 @@
 # echat.id
 ## WA API
-<<<<<<< HEAD
---
-## Run WA client
+### WA Client
 ```
-node waclient.js
-=======
-
-
-## Run WA client
+DEBUG=nightmare xvfb-run --server-args="-screen 0 1024x768x24" node waclient.js 
 ```
-node waclient.js
-#default port 3000
->>>>>>> f93d1bf953d4d9e4b64ea77b70c4d6d5c2d727d4
+### WA queue API
+```
+pm2 start app.js
 ```
 
-## Run WA API
-```
-node app.js
-<<<<<<< HEAD
-=======
-#default port 8080
->>>>>>> f93d1bf953d4d9e4b64ea77b70c4d6d5c2d727d4
-```
+IP:3100/ping
 
-### Testing
-```
-npm test
-```
-<<<<<<< HEAD
-=======
-### Login
-localhost:3000/login.php
+SCAN QR code from /ping
 
-[![851516843_474942097108504402.jpg](https://s14.postimg.org/c3lpwxl9t/851516843_474942097108504402.jpg)](https://postimg.org/image/6fff61gx9/)
+pm2 start app.js
 
-connect with your WA mobile apps
+IP:8080/wa/sendmsg?user=USER&msg=MESSAGE
 
-### GET /sendmsg?user=CONTACT&msg=MESSAGETEXT
-send message to contact (contact can be number or name)
-```
-  {"success":true,"msg":"thanksyou"}
-``` 
-
-### GET /list
-get contacts
-```
-    ["jhon","+191734562","+628821985723"]
-```
-
-### GET /chat?user=CONTACT
-get history 
-```
-    [
-    "23452343455":
-        {
-            "from":"jhon",
-            "timestamp":234214534,
-            "text":"hello",
-            "status":"seen"
-        }
-    "987654345663":
-        {
-            "from":"you",
-            "timestamp":234234534,
-            "text":"hi",
-            "status":"sent"
-        }
-    ]
-```
-### GET /unread
-get all unread msg
-```
-```
->>>>>>> f93d1bf953d4d9e4b64ea77b70c4d6d5c2d727d4
