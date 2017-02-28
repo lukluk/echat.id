@@ -1,0 +1,33 @@
+[33mStarting up http-server, serving [39m[36m./[39m[33m
+Available on:[39m
+[32m  http://127.0.0.1:8181[39m
+[32m  http://139.59.109.143:8181[39m
+[32m  http://10.15.0.16:8181[39m
+[32m  http://10.130.8.85:8181[39m
+Hit CTRL-C to stop the server
+[Tue Feb 28 2017 04:30:42 GMT+0000 (UTC)] "[36mGET[39m [36m/[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:30:42 GMT+0000 (UTC)] "[36mGET[39m [36m/favicon.ico[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:30:42 GMT+0000 (UTC)] "[31mGET[39m [31m/favicon.ico[39m" Error ([31m404[39m): "[31mNot found[39m"
+[Tue Feb 28 2017 04:30:53 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:31:55 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:31:56 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:31:57 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:31:57 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:31:58 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:31:58 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:01 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:02 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:02 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:03 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:08 GMT+0000 (UTC)] "[36mGET[39m [36m/yantosearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:25 GMT+0000 (UTC)] "[36mGET[39m [36m/LIVAZAsearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:29 GMT+0000 (UTC)] "[36mGET[39m [36m/LIVAZAsearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:35 GMT+0000 (UTC)] "[36mGET[39m [36m/LIVAZAsearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:35 GMT+0000 (UTC)] "[36mGET[39m [36m/LIVAZAsearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:36 GMT+0000 (UTC)] "[36mGET[39m [36m/LIVAZAsearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:32:38 GMT+0000 (UTC)] "[36mGET[39m [36m/LIVAZAsearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:36:21 GMT+0000 (UTC)] "[36mGET[39m [36m/LIVAZAsearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:38:04 GMT+0000 (UTC)] "[36mGET[39m [36m/LIVAZAsearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:38:08 GMT+0000 (UTC)] "[36mGET[39m [36m/LIVAZAsearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[Tue Feb 28 2017 04:38:13 GMT+0000 (UTC)] "[36mGET[39m [36m/livazasearch.png[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[31mhttp-server stopped.[39m

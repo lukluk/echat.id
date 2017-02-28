@@ -17,30 +17,11 @@ function Nav(nightmare) {
 
 	this.openWindow = function (user, cb) {
 		nightmare
-			.type('.input-search', user)
-			.wait(1000)
+			.insert('.input-search','')
+			.insert('.input-search', user)
+			.wait(5000)
       .screenshot('./screenshot/'+user + 'search.png')
-			.evaluate(function(user) {
-				var debuglog = []
-				jQuery('.emojitext').each(function() {
-					debuglog.push(jQuery(this).attr('title'))
-					jQuery(this).attr('title', (jQuery(this).attr('title') + '').replaceAll(' ', '').replaceAll('-', '').replace('+', '').toLowerCase())
-
-				})
-        user = user.toLowerCase()
-				if (jQuery('.emojitext[title=' + user + ']').length > 0) {
-					jQuery('.emojitext[title=' + user + ']').attr("class", 'el' + user.toLowerCase())
-				}
-				debuglog.push($('<div>').append(jQuery('.el' + user).clone()).html())
-				return {
-					isfound: jQuery('.el' + user).length > 0,
-					all: jQuery('.el' + user),
-					debug: debuglog
-				}
-			}, user)
 			.then(function(obj) {
-				console.log(obj)
-				if (obj.isfound) {
 					console.log('.el' + user)
 					nightmare
 						.realClick('.emojitext')
@@ -51,11 +32,9 @@ function Nav(nightmare) {
 							cb && cb(false)
 						})
 
-				} else {
-					cb && cb(true)
-				}
 			})
       .catch(function(error) {
+console.log("ERROR",error)
 				res.json({
 					error: true,
 					message: error
@@ -65,6 +44,7 @@ function Nav(nightmare) {
 
 	this.scroll = function (cb, el, child, mode, max, n, now) {
 		console.log('scroll', el, child, mode, max, n, now)
+		var self = this
 		nightmare
 			.evaluate(function(elem, mode, echild, n) {
 				var ch = jQuery(elem).find(echild).length
@@ -90,14 +70,14 @@ function Nav(nightmare) {
 					} else
 					if (!now) {
 						n++
-						scroll(cb, el, child, mode, max, n, ch)
+						self.scroll(cb, el, child, mode, max, n, ch)
 					} else
 					if (ch > now) {
 						n++
-						scroll(cb, el, child, mode, max, n, ch)
+						self.scroll(cb, el, child, mode, max, n, ch)
 					} else {
 						n++
-						scroll(cb, el, child, mode, max, n, ch)
+						self.scroll(cb, el, child, mode, max, n, ch)
 					}
 				}, 2500)
 
@@ -109,6 +89,7 @@ function Nav(nightmare) {
 			user = '+' + user.trim()
 			console.log('fetch ', user)
 		}
+var self=this
 		nightmare
 			.evaluate(function(user) {
 				jQuery('.input-search').sendkeys(user.replaceAll('-', '').replaceAll('+62 ', ''))
@@ -120,7 +101,7 @@ function Nav(nightmare) {
 			.wait('.pane-chat-tile')
 			.wait(500)
 			.then(function() {
-				scroll(function() {
+				self.scroll(function() {
 					nightmare
 						.evaluate(function() {
 							var data = {}

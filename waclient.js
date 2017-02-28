@@ -7,6 +7,7 @@ require('nightmare-upload')(Nightmare);
 
 var nightmare = Nightmare({
 	show: false
+
 })
 nightmare
 	.goto('https://web.whatsapp.com/')
@@ -16,7 +17,11 @@ nightmare
 	})
 var Nav = require('./nav');
 var nav = new Nav(nightmare)
-
+app.get('/ping', function(req, res) {
+	nightmare.screenshot('screenshot/ping.png').then(function(){
+		res.sendfile('/root/echat.id/screenshot/ping.png')
+	})
+})
 app.get('/login', function(req, res) {
 	nightmare
 		.wait('.qrcode')
@@ -29,14 +34,16 @@ app.get('/login', function(req, res) {
 		})
 
 })
+
 app.all('/*', function(req, res, next) {
-  if(req.originalUrl=='/login' || req.originalUrl=='/'){
+  if(req.originalUrl=='/ping' || req.originalUrl=='/login' || req.originalUrl=='/'){
     next()
   }else
 	nav.checkSession(function() {
 		next()
 	})
 });
+
 app.get('/unread', function(req, res) {
 	nightmare
 		.evaluate(function() {
@@ -108,7 +115,7 @@ app.get('/list', function(req, res) {
 app.get('/open', function(req, res) {
 	nav.openWindow(req.query.user, function(err) {
 		if (err) {
-			res.JSON({
+			res.json({
 				error: true
 			})
 		}else
@@ -129,7 +136,7 @@ app.get('/sendmsg', function(req, res) {
 			.wait('.icon-send')
 			.realClick('.icon-send')
 			.realClick('.icon-search-morph')
-      .screenshot('./screenshot/'+'click-icon-'+req.query.user+'.png')
+     // .screenshot('./screenshot/'+'click-icon-'+req.query.user+'.png')
 			.evaluate(function() {
 				var data = {}
 				jQuery('.message-system').remove()
@@ -189,4 +196,4 @@ app.get('/sendmsg', function(req, res) {
 			})
 	})
 })
-app.listen(3000);
+app.listen(3100);
